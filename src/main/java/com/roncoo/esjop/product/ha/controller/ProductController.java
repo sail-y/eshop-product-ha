@@ -24,6 +24,8 @@ public class ProductController {
     @GetMapping("/getProductInfos")
     public String getProductInfos(String productIds) {
 
+        System.out.println("getProductInfos接收到一次请求，productIds=" + productIds);
+
         JSONArray jsonArray = new JSONArray();
 
         for (String productId : productIds.split(",")) {
